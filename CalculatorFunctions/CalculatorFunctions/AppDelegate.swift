@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  SimpleButtons
+//  CalculatorFunctions
 //
-//  Created by Kyle Brooks Robinson on 5/4/15.
+//  Created by Kyle Brooks Robinson on 5/5/15.
 //  Copyright (c) 2015 Kyle Brooks Robinson. All rights reserved.
 //
 
@@ -16,8 +16,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: true)
-        
         return true
     }
 
