@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		911D12E61AFA4841005CE393 /* doubleValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911D12E51AFA4841005CE393 /* doubleValue.swift */; };
 		913A5E141AF7F3CB00E6640A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913A5E131AF7F3CB00E6640A /* AppDelegate.swift */; };
 		913A5E161AF7F3CB00E6640A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913A5E151AF7F3CB00E6640A /* ViewController.swift */; };
 		913A5E191AF7F3CB00E6640A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 913A5E171AF7F3CB00E6640A /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		911D12E51AFA4841005CE393 /* doubleValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = doubleValue.swift; sourceTree = "<group>"; };
 		913A5E0E1AF7F3CB00E6640A /* SimpleButtons.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleButtons.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		913A5E121AF7F3CB00E6640A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		913A5E131AF7F3CB00E6640A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 			children = (
 				913A5E131AF7F3CB00E6640A /* AppDelegate.swift */,
 				913A5E151AF7F3CB00E6640A /* ViewController.swift */,
+				911D12E51AFA4841005CE393 /* doubleValue.swift */,
 				913A5E171AF7F3CB00E6640A /* Main.storyboard */,
 				913A5E1A1AF7F3CB00E6640A /* Images.xcassets */,
 				913A5E1C1AF7F3CB00E6640A /* LaunchScreen.xib */,
@@ -212,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				911D12E61AFA4841005CE393 /* doubleValue.swift in Sources */,
 				913A5E161AF7F3CB00E6640A /* ViewController.swift in Sources */,
 				913A5E141AF7F3CB00E6640A /* AppDelegate.swift in Sources */,
 			);
@@ -409,6 +413,7 @@
 				913A5E2F1AF7F3CB00E6640A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		913A5E301AF7F3CB00E6640A /* Build configuration list for PBXNativeTarget "SimpleButtonsTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +422,7 @@
 				913A5E321AF7F3CB00E6640A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

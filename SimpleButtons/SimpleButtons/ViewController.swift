@@ -20,6 +20,7 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return .LightContent
     }
@@ -64,8 +65,11 @@ class ViewController: UIViewController {
         println("You just pressed the \(sender.currentTitle!) button.")
         
         
-        let dFirstPress = Double(firstPress.toInt()!)
-        let dSecondPress = Double(secondPress.toInt()!)
+//        let dFirstPress = Double(firstPress.toInt()!)
+//        let dSecondPress = Double(secondPress.toInt()!)
+        
+        let dFirstPress = firstPress.doubleValue()
+        let dSecondPress = secondPress.doubleValue()
         
         switch currentOperation {
         case "+":
@@ -100,14 +104,14 @@ class ViewController: UIViewController {
     }
     
     @IBAction func switchingPress(sender: UIButton) {
-//        var switchValue = (calcResult.text!.toInt()! * -1)
+//        var switchValue = (calcResult.text!.doubleValue()! * -1)
         
         if currentOperation.isEmpty {
-            firstPress = "\(firstPress.toInt()! * -1)"
+            firstPress = "\(firstPress.doubleValue() * -1)"
             calcResult.text = firstPress
 
         } else {
-            secondPress = "\(secondPress.toInt()! * -1)"
+            secondPress = "\(secondPress.doubleValue() * -1)"
             calcResult.text = secondPress
 
         }
@@ -118,6 +122,8 @@ class ViewController: UIViewController {
     
     
     @IBAction func decimalPress(sender: UIButton) {
+        println("You just pressed the \(sender.currentTitle!) button.")
+
         if currentOperation.isEmpty {
             firstPress += "."
             calcResult.text = firstPress

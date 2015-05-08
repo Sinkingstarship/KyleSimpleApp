@@ -16,9 +16,9 @@ import UIKit
 
 
 class BodyPart {
-    var name: String = ""
+    var name: String = "A Body Part"
     var isSexy: Bool = true
-    var health: String = ""
+    var health: String = "Healthy"
     
     func wiggleSelf() {
         println("This body part is now wiggling!")
@@ -333,7 +333,6 @@ class Fingers: BodyPart {
     var fingernails = Fingernails()
     var isPointing: Bool = false
     
-    
     func point() {
         println("You're your fingers.")
         isPointing = true
@@ -349,6 +348,8 @@ class Fingers: BodyPart {
     }
     
 }
+
+
 
 class Fingernails: BodyPart {
     
@@ -387,6 +388,11 @@ class Fingernails: BodyPart {
     }
     
 }
+
+var newFinger = Fingers()
+
+var newFingernails = Fingernails()
+
 
 class Back: BodyPart {
     var isItchy: Bool = true

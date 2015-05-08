@@ -1,0 +1,428 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9100AB3A1AFCFDE200A52A40 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9100AB391AFCFDE200A52A40 /* AppDelegate.swift */; };
+		9100AB3C1AFCFDE200A52A40 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9100AB3B1AFCFDE200A52A40 /* ViewController.swift */; };
+		9100AB3F1AFCFDE200A52A40 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9100AB3D1AFCFDE200A52A40 /* Main.storyboard */; };
+		9100AB411AFCFDE200A52A40 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9100AB401AFCFDE200A52A40 /* Images.xcassets */; };
+		9100AB441AFCFDE200A52A40 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9100AB421AFCFDE200A52A40 /* LaunchScreen.xib */; };
+		9100AB501AFCFDE200A52A40 /* NewTickTackToesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9100AB4F1AFCFDE200A52A40 /* NewTickTackToesTests.swift */; };
+		9100AB5C1AFCFF1A00A52A40 /* TickTackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9100AB5B1AFCFF1A00A52A40 /* TickTackButton.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9100AB4A1AFCFDE200A52A40 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9100AB2C1AFCFDE200A52A40 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9100AB331AFCFDE200A52A40;
+			remoteInfo = NewTickTackToes;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9100AB341AFCFDE200A52A40 /* NewTickTackToes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewTickTackToes.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9100AB381AFCFDE200A52A40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9100AB391AFCFDE200A52A40 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9100AB3B1AFCFDE200A52A40 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9100AB3E1AFCFDE200A52A40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9100AB401AFCFDE200A52A40 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		9100AB431AFCFDE200A52A40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		9100AB491AFCFDE200A52A40 /* NewTickTackToesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewTickTackToesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9100AB4E1AFCFDE200A52A40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9100AB4F1AFCFDE200A52A40 /* NewTickTackToesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTickTackToesTests.swift; sourceTree = "<group>"; };
+		9100AB5B1AFCFF1A00A52A40 /* TickTackButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TickTackButton.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9100AB311AFCFDE200A52A40 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9100AB461AFCFDE200A52A40 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9100AB2B1AFCFDE200A52A40 = {
+			isa = PBXGroup;
+			children = (
+				9100AB361AFCFDE200A52A40 /* NewTickTackToes */,
+				9100AB4C1AFCFDE200A52A40 /* NewTickTackToesTests */,
+				9100AB351AFCFDE200A52A40 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9100AB351AFCFDE200A52A40 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9100AB341AFCFDE200A52A40 /* NewTickTackToes.app */,
+				9100AB491AFCFDE200A52A40 /* NewTickTackToesTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9100AB361AFCFDE200A52A40 /* NewTickTackToes */ = {
+			isa = PBXGroup;
+			children = (
+				9100AB391AFCFDE200A52A40 /* AppDelegate.swift */,
+				9100AB3B1AFCFDE200A52A40 /* ViewController.swift */,
+				9100AB5B1AFCFF1A00A52A40 /* TickTackButton.swift */,
+				9100AB3D1AFCFDE200A52A40 /* Main.storyboard */,
+				9100AB401AFCFDE200A52A40 /* Images.xcassets */,
+				9100AB421AFCFDE200A52A40 /* LaunchScreen.xib */,
+				9100AB371AFCFDE200A52A40 /* Supporting Files */,
+			);
+			path = NewTickTackToes;
+			sourceTree = "<group>";
+		};
+		9100AB371AFCFDE200A52A40 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9100AB381AFCFDE200A52A40 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9100AB4C1AFCFDE200A52A40 /* NewTickTackToesTests */ = {
+			isa = PBXGroup;
+			children = (
+				9100AB4F1AFCFDE200A52A40 /* NewTickTackToesTests.swift */,
+				9100AB4D1AFCFDE200A52A40 /* Supporting Files */,
+			);
+			path = NewTickTackToesTests;
+			sourceTree = "<group>";
+		};
+		9100AB4D1AFCFDE200A52A40 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9100AB4E1AFCFDE200A52A40 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9100AB331AFCFDE200A52A40 /* NewTickTackToes */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9100AB531AFCFDE200A52A40 /* Build configuration list for PBXNativeTarget "NewTickTackToes" */;
+			buildPhases = (
+				9100AB301AFCFDE200A52A40 /* Sources */,
+				9100AB311AFCFDE200A52A40 /* Frameworks */,
+				9100AB321AFCFDE200A52A40 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NewTickTackToes;
+			productName = NewTickTackToes;
+			productReference = 9100AB341AFCFDE200A52A40 /* NewTickTackToes.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9100AB481AFCFDE200A52A40 /* NewTickTackToesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9100AB561AFCFDE200A52A40 /* Build configuration list for PBXNativeTarget "NewTickTackToesTests" */;
+			buildPhases = (
+				9100AB451AFCFDE200A52A40 /* Sources */,
+				9100AB461AFCFDE200A52A40 /* Frameworks */,
+				9100AB471AFCFDE200A52A40 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9100AB4B1AFCFDE200A52A40 /* PBXTargetDependency */,
+			);
+			name = NewTickTackToesTests;
+			productName = NewTickTackToesTests;
+			productReference = 9100AB491AFCFDE200A52A40 /* NewTickTackToesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9100AB2C1AFCFDE200A52A40 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Kyle Brooks Robinson";
+				TargetAttributes = {
+					9100AB331AFCFDE200A52A40 = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+					9100AB481AFCFDE200A52A40 = {
+						CreatedOnToolsVersion = 6.3.1;
+						TestTargetID = 9100AB331AFCFDE200A52A40;
+					};
+				};
+			};
+			buildConfigurationList = 9100AB2F1AFCFDE200A52A40 /* Build configuration list for PBXProject "NewTickTackToes" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9100AB2B1AFCFDE200A52A40;
+			productRefGroup = 9100AB351AFCFDE200A52A40 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9100AB331AFCFDE200A52A40 /* NewTickTackToes */,
+				9100AB481AFCFDE200A52A40 /* NewTickTackToesTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9100AB321AFCFDE200A52A40 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9100AB3F1AFCFDE200A52A40 /* Main.storyboard in Resources */,
+				9100AB441AFCFDE200A52A40 /* LaunchScreen.xib in Resources */,
+				9100AB411AFCFDE200A52A40 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9100AB471AFCFDE200A52A40 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9100AB301AFCFDE200A52A40 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9100AB5C1AFCFF1A00A52A40 /* TickTackButton.swift in Sources */,
+				9100AB3C1AFCFDE200A52A40 /* ViewController.swift in Sources */,
+				9100AB3A1AFCFDE200A52A40 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9100AB451AFCFDE200A52A40 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9100AB501AFCFDE200A52A40 /* NewTickTackToesTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9100AB4B1AFCFDE200A52A40 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9100AB331AFCFDE200A52A40 /* NewTickTackToes */;
+			targetProxy = 9100AB4A1AFCFDE200A52A40 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9100AB3D1AFCFDE200A52A40 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9100AB3E1AFCFDE200A52A40 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9100AB421AFCFDE200A52A40 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9100AB431AFCFDE200A52A40 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9100AB511AFCFDE200A52A40 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9100AB521AFCFDE200A52A40 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9100AB541AFCFDE200A52A40 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = NewTickTackToes/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		9100AB551AFCFDE200A52A40 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = NewTickTackToes/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		9100AB571AFCFDE200A52A40 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = NewTickTackToesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NewTickTackToes.app/NewTickTackToes";
+			};
+			name = Debug;
+		};
+		9100AB581AFCFDE200A52A40 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = NewTickTackToesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NewTickTackToes.app/NewTickTackToes";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9100AB2F1AFCFDE200A52A40 /* Build configuration list for PBXProject "NewTickTackToes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9100AB511AFCFDE200A52A40 /* Debug */,
+				9100AB521AFCFDE200A52A40 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9100AB531AFCFDE200A52A40 /* Build configuration list for PBXNativeTarget "NewTickTackToes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9100AB541AFCFDE200A52A40 /* Debug */,
+				9100AB551AFCFDE200A52A40 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		9100AB561AFCFDE200A52A40 /* Build configuration list for PBXNativeTarget "NewTickTackToesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9100AB571AFCFDE200A52A40 /* Debug */,
+				9100AB581AFCFDE200A52A40 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9100AB2C1AFCFDE200A52A40 /* Project object */;
+}
