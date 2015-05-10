@@ -14,12 +14,10 @@ enum Player {
 }
 
 //The below prefix to class is really important!
-@IBDesignable class TickTackButton: UIButton {
+@IBDesignable class outerTickTackCircle: UILabel {
     
     @IBInspectable var row: Int = 0
     @IBInspectable var col: Int = 0
-    
-    var player: Player?
     
     
     //The rect argument below is the bounds.
@@ -33,21 +31,40 @@ enum Player {
         CGContextSetLineWidth(context, 1)
         CGContextStrokeEllipseInRect(context, insetRect)
         
+        }
+    
+
+}
+
+@IBDesignable class TickTackButton: UIButton {
+    
+    @IBInspectable var row: Int = 0
+    @IBInspectable var col: Int = 0
+    
+    var player: Player?
+    
+    
+    //The rect argument below is the bounds.
+    override func drawRect(rect: CGRect) {
+        
+        var context = UIGraphicsGetCurrentContext()
+        
+        
         if let playerUnwrapped = player {
             
             // Inner small circle, filled in
             UIColor.orangeColor().set()
-        
+            
             if playerUnwrapped == Player.Two {
                 
                 UIColor.greenColor().set()
             }
             
-            var smallCircleRect = CGRectInset(rect, 40, 40)
+            var smallCircleRect = CGRectInset(rect, 1, 1)
             CGContextFillEllipseInRect(context, smallCircleRect)
-        
+            
         }
     }
     
-
+    
 }
