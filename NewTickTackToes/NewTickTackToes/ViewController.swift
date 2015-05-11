@@ -20,6 +20,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var b8: TickTackButton!
     @IBOutlet weak var b9: TickTackButton!
     @IBOutlet weak var resetButtonOutlet: UIButton!
+    @IBOutlet weak var nextRoundButton: UIButton!
     
     
     var spaces: [[ Player? ]] = [
@@ -39,6 +40,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         resetButtonOutlet.hidden = true
+        nextRoundButton.hidden = true
         
 
         
@@ -88,20 +90,17 @@ class ViewController: UIViewController {
         checkForWinner()
         
         if currentPlayer == .One {
-            currentPlayer == .Two
+            currentPlayer = .Two
             playerTurnLabel.text = "Player Two's Turn"
         } else {
             currentPlayer = .One
             playerTurnLabel.text = "Player One's Turn"
         }
+        
         //The below is another way to phrase the above code.
 //        currentPlayer = (currentPlayer == .One) ? .Two : .One
         
-//        if currentPlayer = Player.One {
-//            playerTurnLabel.text = "Player One's Turn"
-//        } else {
-//            playerTurnLabel.text = "Player Two's Turn"
-//        }
+
     }
     
     func endGame() {
@@ -125,7 +124,16 @@ class ViewController: UIViewController {
         b9.player = nil
         b9.setNeedsDisplay()
         
+        spaces = [
+        
+        [nil,nil,nil],
+        [nil,nil,nil],
+        [nil,nil,nil]
+        
+        ]
+        
         resetButtonOutlet.hidden = false
+        nextRoundButton.hidden = true
     }
     
         
@@ -159,15 +167,18 @@ class ViewController: UIViewController {
                 println("Player \(winner.hashValue + 1) Wins.")
                     
                     if (winner.hashValue + 1) == 1 {
-                        onePScore + 1
+                        onePScore += 1
                         playerScore1.text = String(onePScore)
+                        
 
                     } else if (winner.hashValue + 1) == 2 {
-                        twoPScore + 1
+                        twoPScore += 1
                         playerScore2.text = String(twoPScore)
                     }
+                    
+                nextRoundButton.hidden = false
 
-                endGame()
+
                 //NOTE:  This is where things get risky.  I'm trying to write the stalemate conditions below. In case of emergency, delete 'else.'
                 }
                 
@@ -186,6 +197,11 @@ class ViewController: UIViewController {
         
     
     
+    }
+    
+    
+    @IBAction func nextRoundTouch(sender: UIButton) {
+        endGame()
     }
     
     
