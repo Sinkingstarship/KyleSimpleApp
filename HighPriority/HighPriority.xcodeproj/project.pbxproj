@@ -8,11 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		919418991B00E6CB006E448C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919418981B00E6CB006E448C /* AppDelegate.swift */; };
-		9194189B1B00E6CB006E448C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9194189A1B00E6CB006E448C /* ViewController.swift */; };
 		9194189E1B00E6CB006E448C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9194189C1B00E6CB006E448C /* Main.storyboard */; };
 		919418A01B00E6CB006E448C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9194189F1B00E6CB006E448C /* Images.xcassets */; };
 		919418A31B00E6CB006E448C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 919418A11B00E6CB006E448C /* LaunchScreen.xib */; };
 		919418AF1B00E6CB006E448C /* HighPriorityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919418AE1B00E6CB006E448C /* HighPriorityTests.swift */; };
+		919418B91B00E8E3006E448C /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919418B81B00E8E3006E448C /* ListTableViewController.swift */; };
+		919418BB1B00E92F006E448C /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919418BA1B00E92F006E448C /* ListTableViewCell.swift */; };
+		919418BD1B0127AA006E448C /* priorityButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919418BC1B0127AA006E448C /* priorityButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +31,15 @@
 		919418931B00E6CB006E448C /* HighPriority.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HighPriority.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		919418971B00E6CB006E448C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		919418981B00E6CB006E448C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9194189A1B00E6CB006E448C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9194189D1B00E6CB006E448C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9194189F1B00E6CB006E448C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		919418A21B00E6CB006E448C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		919418A81B00E6CB006E448C /* HighPriorityTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HighPriorityTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		919418AD1B00E6CB006E448C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		919418AE1B00E6CB006E448C /* HighPriorityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighPriorityTests.swift; sourceTree = "<group>"; };
+		919418B81B00E8E3006E448C /* ListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
+		919418BA1B00E92F006E448C /* ListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
+		919418BC1B0127AA006E448C /* priorityButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = priorityButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,11 +81,10 @@
 		919418951B00E6CB006E448C /* HighPriority */ = {
 			isa = PBXGroup;
 			children = (
-				919418981B00E6CB006E448C /* AppDelegate.swift */,
-				9194189A1B00E6CB006E448C /* ViewController.swift */,
 				9194189C1B00E6CB006E448C /* Main.storyboard */,
-				9194189F1B00E6CB006E448C /* Images.xcassets */,
-				919418A11B00E6CB006E448C /* LaunchScreen.xib */,
+				919418BC1B0127AA006E448C /* priorityButton.swift */,
+				919418B81B00E8E3006E448C /* ListTableViewController.swift */,
+				919418BA1B00E92F006E448C /* ListTableViewCell.swift */,
 				919418961B00E6CB006E448C /* Supporting Files */,
 			);
 			path = HighPriority;
@@ -90,6 +93,9 @@
 		919418961B00E6CB006E448C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				919418981B00E6CB006E448C /* AppDelegate.swift */,
+				9194189F1B00E6CB006E448C /* Images.xcassets */,
+				919418A11B00E6CB006E448C /* LaunchScreen.xib */,
 				919418971B00E6CB006E448C /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -212,8 +218,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9194189B1B00E6CB006E448C /* ViewController.swift in Sources */,
 				919418991B00E6CB006E448C /* AppDelegate.swift in Sources */,
+				919418BD1B0127AA006E448C /* priorityButton.swift in Sources */,
+				919418B91B00E8E3006E448C /* ListTableViewController.swift in Sources */,
+				919418BB1B00E92F006E448C /* ListTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
