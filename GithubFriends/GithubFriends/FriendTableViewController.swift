@@ -11,6 +11,8 @@ import UIKit
 class FriendTableViewController: UITableViewController {
     
     @IBOutlet weak var friendNameField: UITextField!
+   // @IBOutlet weak var avatarView: avatarView!
+   
     
     var friends: [[String:AnyObject?]] = [
         
@@ -61,12 +63,42 @@ class FriendTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        var newAvatarView = avatarView()
+
+        newAvatarView.layer.cornerRadius = 10
     }
     
     
     @IBAction func addFriend(sender: AnyObject) {
         
-        let endpoint = "https://api.github.com/users/\(friendNameField.text)"
+        let endpoint = "https://api.github.com/users/\(friendNameField.text)?client_id=18c2e67eaf44f4a60b76&client_secret=5528dd41089fd0a5de62e7927b849075b65463a0"
+        
+
+        
+        println(endpoint)
+        
+        if let url = NSURL(string: endpoint) {
+            
+            let request = NSURLRequest(URL: url)
+            
+            if let data = NSURLConnection.sendSynchronousRequest(request, returningResponse: nil, error: nil) {
+                
+                if let friendInfo = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as? [String: AnyObject] {
+                
+                    println(friendInfo)
+                    
+                    friends.insert(friendInfo, atIndex: 0)
+                    tableView.reloadData()
+                    
+                }
+                
+                
+            }
+            
+            
+        }
+        
         
         friendNameField.text = ""
         
@@ -93,17 +125,46 @@ class FriendTableViewController: UITableViewController {
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("friendCell", forIndexPath: indexPath) as! UITableViewCell
         
-        cell.textLabel?.text = friends[indexPath.row]["name"] as? String
+        let cell = tableView.dequeueReusableCellWithIdentifier("friendCell", forIndexPath: indexPath) as! friendTableViewCell
+        var repos = friends[indexPath.row]["public_repos"] as? String
+        var gists = friends[indexPath.row]["public_gists"] as? String
+        
+        
+        cell.avatarViewBox.layer.cornerRadius = 10
+        
+        cell.nameLabel.text = friends[indexPath.row]["name"] as? String
+        
+        cell.reposButton.setTitle("Repos \(repos)", forState: UIControlState.Normal)
+        
+        cell.gistsButton.setTitle("Gists \(gists)", forState: UIControlState.Normal)
+        
+        
+        if let url = NSURL(string: friends[indexPath.row]["avatar_url"] as! String) {
+            let data = NSData(contentsOfURL: url)
+            cell.avatarViewBox.image = UIImage(data: data!)
+        }
+
+        
+//        avatarView.image =
+        
 
         // Configure the cell...
+        
+        
         
         return cell
 
     }
     
 
+//    override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell as! friendTableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+//        
+//
+//        
+//        cell.avatarViewBox.layer.cornerRadius = 10
+//    }
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
@@ -112,17 +173,19 @@ class FriendTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // Override to support editing the table view.
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
+            
+            friends.removeAtIndex(indexPath.row)
             // Delete the row from the data source
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
         } else if editingStyle == .Insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    */
+
 
     /*
     // Override to support rearranging the table view.
