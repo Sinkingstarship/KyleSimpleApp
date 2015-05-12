@@ -1,107 +1,75 @@
 //
-//  ListTableViewController.swift
-//  HighPriority
+//  FriendTableViewController.swift
+//  GithubFriends
 //
-//  Created by Kyle Brooks Robinson on 5/11/15.
+//  Created by Kyle Brooks Robinson on 5/12/15.
 //  Copyright (c) 2015 Kyle Brooks Robinson. All rights reserved.
 //
 
 import UIKit
 
-enum Priority {
-    case High
-    case Medium
-    case Low
-}
-
-class ListTableViewController: UITableViewController {
-    @IBOutlet weak var yellowLowButton: priorityButton!
-    @IBOutlet weak var orangeMediumButton: priorityButton!
-    @IBOutlet weak var redHighButton: priorityButton!
-    @IBOutlet weak var createButton: UIButton!
-    @IBOutlet weak var itemTextField: UITextField!
+class FriendTableViewController: UITableViewController {
     
+    @IBOutlet weak var friendNameField: UITextField!
     
-   
-    var priorityChoice = 0
-    
-    @IBAction func highPriority(sender: priorityButton) {
-        priorityChoice = 0
-        sender.selectedButton = true
-        orangeMediumButton.selectedButton = false
-        yellowLowButton.selectedButton = false
-    }
-    
-    @IBAction func mediumPriority(sender: priorityButton) {
-        priorityChoice = 1
-        sender.selectedButton = true
-        redHighButton.selectedButton = false
-        yellowLowButton.selectedButton = false
-    }
-    
-    @IBAction func lowPriority(sender: priorityButton) {
-        priorityChoice = 2
-        sender.selectedButton = true
-        orangeMediumButton.selectedButton = false
-        redHighButton.selectedButton = false
-    }
-    
-    var listItems: [[String:AnyObject]] = [
+    var friends: [[String:AnyObject?]] = [
         
-//        [
-//            "name": "Sleep in bed",
-//            "timeCreated": NSDate(),
-//            "priority": 0,
-//            "completed": false
-//        ],
-//        [
-//            "name":"Destroy enemies",
-//            "timeCreated": NSDate(),
-//            "priority": 1,
-//            "completed": false
-//        ],
-//        
-//    
-//    
-//    
+        [
+            "login": "kylerobinson1988",
+            "id": 12154801,
+            "avatar_url": "https://avatars.githubusercontent.com/u/12154801?v=3",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/kylerobinson1988",
+            "html_url": "https://github.com/kylerobinson1988",
+            "followers_url": "https://api.github.com/users/kylerobinson1988/followers",
+            "following_url": "https://api.github.com/users/kylerobinson1988/following{/other_user}",
+            "gists_url": "https://api.github.com/users/kylerobinson1988/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/kylerobinson1988/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/kylerobinson1988/subscriptions",
+            "organizations_url": "https://api.github.com/users/kylerobinson1988/orgs",
+            "repos_url": "https://api.github.com/users/kylerobinson1988/repos",
+            "events_url": "https://api.github.com/users/kylerobinson1988/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/kylerobinson1988/received_events",
+            "type": "User",
+            "site_admin": false,
+            "name": "Kyle Robinson",
+            "company": "",
+            "blog": "",
+            "location": "Atlanta, Georgia",
+            "email": "",
+            "hireable": false,
+            "bio": nil,
+            "public_repos": 1,
+            "public_gists": 0,
+            "followers": 8,
+            "following": 8,
+            "created_at": "2015-04-28T14:21:43Z",
+            "updated_at": "2015-05-12T13:09:30Z"
+        ]
+    
     
     
     ]
     
     
-    
-    
-    @IBOutlet weak var itemNameField: UITextField!
-    
-    
-    @IBAction func createItem(sender: AnyObject) {
-        
-        var itemInfo = [
-            "name": itemNameField.text,
-            "timeCreated": NSDate(),
-            "priority": priorityChoice,
-            "completed": false
-        
-        ]
-        
-        listItems.insert(itemInfo, atIndex: 0)
-        tableView.reloadData()
-        itemTextField.text = ""
-    }
-
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+    }
+    
+    
+    @IBAction func addFriend(sender: AnyObject) {
         
-        createButton.layer.cornerRadius = 5
+        let endpoint = "https://api.github.com/users/\(friendNameField.text)"
+        
+        friendNameField.text = ""
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -118,19 +86,23 @@ class ListTableViewController: UITableViewController {
 //    }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return listItems.count
+        // #warning Incomplete method implementation.
+        // Return the number of rows in the section.
+        return friends.count
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("listCell", forIndexPath: indexPath) as! ListTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("friendCell", forIndexPath: indexPath) as! UITableViewCell
         
-        
-        cell.itemInfo = listItems[indexPath.row]
-        // Configure the cell...
+        cell.textLabel?.text = friends[indexPath.row]["name"] as? String
 
+        // Configure the cell...
+        
         return cell
+
     }
+    
 
     /*
     // Override to support conditional editing of the table view.
@@ -140,20 +112,17 @@ class ListTableViewController: UITableViewController {
     }
     */
 
-    
+    /*
     // Override to support editing the table view.
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
             // Delete the row from the data source
-            listItems.removeAtIndex(indexPath.row)
-            
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-            
         } else if editingStyle == .Insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    
+    */
 
     /*
     // Override to support rearranging the table view.
