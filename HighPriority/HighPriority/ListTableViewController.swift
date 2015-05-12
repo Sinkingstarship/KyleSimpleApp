@@ -15,42 +15,55 @@ enum Priority {
 }
 
 class ListTableViewController: UITableViewController {
-    @IBOutlet weak var yellowLowButton: UIButton!
-    @IBOutlet weak var orangeMediumButton: UIButton!
-    @IBOutlet weak var redHighButton: UIButton!
+    @IBOutlet weak var yellowLowButton: priorityButton!
+    @IBOutlet weak var orangeMediumButton: priorityButton!
+    @IBOutlet weak var redHighButton: priorityButton!
+    @IBOutlet weak var createButton: UIButton!
+    @IBOutlet weak var itemTextField: UITextField!
+    
+    
    
     var priorityChoice = 0
     
     @IBAction func highPriority(sender: priorityButton) {
         priorityChoice = 0
+        sender.selectedButton = true
+        orangeMediumButton.selectedButton = false
+        yellowLowButton.selectedButton = false
     }
     
     @IBAction func mediumPriority(sender: priorityButton) {
         priorityChoice = 1
+        sender.selectedButton = true
+        redHighButton.selectedButton = false
+        yellowLowButton.selectedButton = false
     }
     
     @IBAction func lowPriority(sender: priorityButton) {
         priorityChoice = 2
+        sender.selectedButton = true
+        orangeMediumButton.selectedButton = false
+        redHighButton.selectedButton = false
     }
     
     var listItems: [[String:AnyObject]] = [
         
-        [
-            "name": "Sleep in bed",
-            "timeCreated": NSDate(),
-            "priority": 0,
-            "completed": false
-        ],
-        [
-            "name":"Destroy enemies",
-            "timeCreated": NSDate(),
-            "priority": 1,
-            "completed": false
-        ],
-        
-    
-    
-    
+//        [
+//            "name": "Sleep in bed",
+//            "timeCreated": NSDate(),
+//            "priority": 0,
+//            "completed": false
+//        ],
+//        [
+//            "name":"Destroy enemies",
+//            "timeCreated": NSDate(),
+//            "priority": 1,
+//            "completed": false
+//        ],
+//        
+//    
+//    
+//    
     
     
     ]
@@ -71,8 +84,9 @@ class ListTableViewController: UITableViewController {
         
         ]
         
-        listItems.append(itemInfo)
+        listItems.insert(itemInfo, atIndex: 0)
         tableView.reloadData()
+        itemTextField.text = ""
     }
 
     
@@ -86,6 +100,8 @@ class ListTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        createButton.layer.cornerRadius = 5
     }
 
     override func didReceiveMemoryWarning() {
@@ -124,17 +140,19 @@ class ListTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // Override to support editing the table view.
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
             // Delete the row from the data source
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+//            itemInfo.removeItemAtIndex()
+            
         } else if editingStyle == .Insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    */
+    
 
     /*
     // Override to support rearranging the table view.

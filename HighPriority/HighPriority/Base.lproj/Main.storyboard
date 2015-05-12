@@ -157,8 +157,8 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LIY-4E-Vi0" id="0g8-gC-cbQ">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="UYl-e1-isv">
-                                            <rect key="frame" x="29" y="8" width="545" height="49"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="UYl-e1-isv">
+                                            <rect key="frame" x="49" y="8" width="525" height="49"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="22"/>
                                             <color key="textColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -170,8 +170,55 @@
                                                 <constraint firstAttribute="height" constant="1" id="pEn-xB-n3D"/>
                                             </constraints>
                                         </view>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kbB-aC-dDg" customClass="priorityButton" customModule="HighPriority" customModuleProvider="target">
+                                            <rect key="frame" x="-116" y="17" width="30" height="30"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
+                                            <state key="normal">
+                                                <color key="titleColor" red="0.86716180099999995" green="0.090820784230000007" blue="0.15474236059999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="highPriority:" destination="bZ7-Bp-fxo" eventType="touchUpInside" id="lXQ-A4-0y6"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N5l-QO-zQv" customClass="priorityButton" customModule="HighPriority" customModuleProvider="target">
+                                            <rect key="frame" x="-78" y="17" width="30" height="30"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
+                                            <state key="normal">
+                                                <color key="titleColor" red="0.97254997489999995" green="0.54901999239999999" blue="0.16471000020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="mediumPriority:" destination="bZ7-Bp-fxo" eventType="touchUpInside" id="WJH-9e-8Vm"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mFJ-UW-oIo" customClass="priorityButton" customModule="HighPriority" customModuleProvider="target">
+                                            <rect key="frame" x="-40" y="17" width="30" height="30"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
+                                            <state key="normal">
+                                                <color key="titleColor" red="0.99513959880000002" green="0.96599932690000001" blue="0.15016936789999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="lowPriority:" destination="bZ7-Bp-fxo" eventType="touchUpInside" id="anx-KV-dJz"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="64d-eM-trC" customClass="slideButton" customModule="HighPriority" customModuleProvider="target">
+                                            <rect key="frame" x="8" y="18" width="30" height="30"/>
+                                            <state key="normal">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0G3-pt-lWR">
+                                            <rect key="frame" x="-125" y="-1" width="125" height="65"/>
+                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstItem="UYl-e1-isv" firstAttribute="leading" secondItem="0g8-gC-cbQ" secondAttribute="leadingMargin" constant="41" id="7bT-ti-bh0"/>
                                         <constraint firstItem="UYl-e1-isv" firstAttribute="top" secondItem="0g8-gC-cbQ" secondAttribute="topMargin" id="F7f-Es-aIM"/>
                                         <constraint firstItem="V06-BU-Lo3" firstAttribute="top" secondItem="0g8-gC-cbQ" secondAttribute="topMargin" constant="23" id="b5g-vD-lbV"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="V06-BU-Lo3" secondAttribute="trailing" constant="5" id="c6b-sb-NBY"/>
@@ -180,6 +227,11 @@
                                         <constraint firstItem="V06-BU-Lo3" firstAttribute="leading" secondItem="0g8-gC-cbQ" secondAttribute="leadingMargin" constant="6" id="uNo-uJ-t9K"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="UYl-e1-isv" secondAttribute="trailing" constant="18" id="vCa-0I-R2E"/>
                                     </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="tmV-7H-5L7"/>
+                                        </mask>
+                                    </variation>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.6065816975006284" green="0.33074042231386258" blue="0.97254997489999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
@@ -194,7 +246,9 @@
                         </connections>
                     </tableView>
                     <connections>
+                        <outlet property="createButton" destination="DEP-8w-BHJ" id="etD-2t-77i"/>
                         <outlet property="itemNameField" destination="HN6-ig-HQ2" id="0WY-mN-4HW"/>
+                        <outlet property="itemTextField" destination="HN6-ig-HQ2" id="ILA-Bi-XeA"/>
                         <outlet property="orangeMediumButton" destination="Env-J0-T5R" id="kah-ux-cHs"/>
                         <outlet property="redHighButton" destination="oLH-Vf-TyF" id="cph-pC-iJ9"/>
                         <outlet property="yellowLowButton" destination="ynb-Vj-f2b" id="d5d-VS-f0f"/>
