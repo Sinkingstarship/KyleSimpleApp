@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ProfileTableViewCell: UITableViewCell {
+class RepoTableViewCell: UITableViewCell {
 
     @IBOutlet weak var sampleAppsLabel: UILabel!
     @IBOutlet weak var appDescriptionLabel: UILabel!

@@ -64,40 +64,29 @@ class FriendTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
-        var newAvatarView = avatarView()
-
-        newAvatarView.layer.cornerRadius = 10
+      
+        
     }
     
     
     @IBAction func addFriend(sender: AnyObject) {
         
-        let endpoint = "https://api.github.com/users/\(friendNameField.text)?client_id=18c2e67eaf44f4a60b76&client_secret=5528dd41089fd0a5de62e7927b849075b65463a0"
+        let endpoint = "https://api.github.com/users/\(friendNameField.text)"
         
 
         
         println(endpoint)
         
-        if let url = NSURL(string: endpoint) {
+        if let friendInfo = GitHubRequest.getInfoWithEndpoint(endpoint) as? [String:AnyObject] {
             
-            let request = NSURLRequest(URL: url)
+            println(friendInfo)
             
-            if let data = NSURLConnection.sendSynchronousRequest(request, returningResponse: nil, error: nil) {
-                
-                if let friendInfo = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as? [String: AnyObject] {
-                
-                    println(friendInfo)
-                    
-                    friends.insert(friendInfo, atIndex: 0)
-                    tableView.reloadData()
-                    
-                }
-                
-                
-            }
-            
-            
+            friends.insert(friendInfo, atIndex: 0)
+            tableView.reloadData()
+
         }
+        
+    
         
         
         friendNameField.text = ""
@@ -128,6 +117,8 @@ class FriendTableViewController: UITableViewController {
         
         let cell = tableView.dequeueReusableCellWithIdentifier("friendCell", forIndexPath: indexPath) as! friendTableViewCell
         
+        // My way:
+        
         if var repos = friends[indexPath.row]["public_repos"] as? Int {
                 cell.reposButton.setTitle("Repos \(repos)", forState: UIControlState.Normal)
         }
@@ -136,14 +127,20 @@ class FriendTableViewController: UITableViewController {
                 cell.gistsButton.setTitle("Gists \(gists)", forState: UIControlState.Normal)
         }
         
+        // My way
+        
         
         cell.avatarViewBox.layer.cornerRadius = 10
+        cell.avatarViewBox.layer.masksToBounds = true
         
         cell.nameLabel.text = friends[indexPath.row]["name"] as? String
         
+        // Joe's way
         
+        cell.friendIndex = indexPath.row
+        cell.friendInfo = friends[indexPath.row]
         
-        
+        // Joe's Way
         
         
         if let url = NSURL(string: friends[indexPath.row]["avatar_url"] as! String) {
@@ -207,14 +204,23 @@ class FriendTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        // The below isn't force unwrapping it, the destination view controller is not an optional.
+        
+        var reposTVC = segue.destinationViewController as! ReposTableTableViewController
+        
+        var reposButton = sender as! UIButton
+        
+        reposTVC.friendInfo = friends[reposButton.tag]
+        
         // Get the new view controller using [segue destinationViewController].
         // Pass the selected object to the new view controller.
     }
-    */
+    
 
 }

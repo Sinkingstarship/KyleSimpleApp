@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		916592991B0397AE00C38115 /* GitHubRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916592981B0397AE00C38115 /* GitHubRequest.swift */; };
 		919418CD1B02390A006E448C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919418CC1B02390A006E448C /* AppDelegate.swift */; };
 		919418D21B02390A006E448C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 919418D01B02390A006E448C /* Main.storyboard */; };
 		919418D41B02390A006E448C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 919418D31B02390A006E448C /* Images.xcassets */; };
@@ -14,10 +15,10 @@
 		919418E31B02390A006E448C /* GithubFriendsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919418E21B02390A006E448C /* GithubFriendsTests.swift */; };
 		919418ED1B02402B006E448C /* FriendTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919418EC1B02402B006E448C /* FriendTableViewController.swift */; };
 		919418EF1B0283B9006E448C /* avatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919418EE1B0283B9006E448C /* avatarView.swift */; };
-		919418F31B0285B5006E448C /* friendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919418F21B0285B5006E448C /* friendTableViewCell.swift */; };
+		919418F31B0285B5006E448C /* FriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919418F21B0285B5006E448C /* FriendTableViewCell.swift */; };
 		919418F51B02C2C4006E448C /* roundedButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919418F41B02C2C4006E448C /* roundedButtons.swift */; };
-		919418F91B02CE64006E448C /* ProfileTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919418F81B02CE64006E448C /* ProfileTableTableViewController.swift */; };
-		919418FB1B02CEE2006E448C /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919418FA1B02CEE2006E448C /* ProfileTableViewCell.swift */; };
+		919418F91B02CE64006E448C /* ReposTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919418F81B02CE64006E448C /* ReposTableTableViewController.swift */; };
+		919418FB1B02CEE2006E448C /* RepoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919418FA1B02CEE2006E448C /* RepoTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +32,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		916592981B0397AE00C38115 /* GitHubRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubRequest.swift; sourceTree = "<group>"; };
 		919418C71B02390A006E448C /* GithubFriends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubFriends.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		919418CB1B02390A006E448C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		919418CC1B02390A006E448C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -42,10 +44,10 @@
 		919418E21B02390A006E448C /* GithubFriendsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubFriendsTests.swift; sourceTree = "<group>"; };
 		919418EC1B02402B006E448C /* FriendTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendTableViewController.swift; sourceTree = "<group>"; };
 		919418EE1B0283B9006E448C /* avatarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = avatarView.swift; sourceTree = "<group>"; };
-		919418F21B0285B5006E448C /* friendTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = friendTableViewCell.swift; sourceTree = "<group>"; };
+		919418F21B0285B5006E448C /* FriendTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendTableViewCell.swift; sourceTree = "<group>"; };
 		919418F41B02C2C4006E448C /* roundedButtons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = roundedButtons.swift; sourceTree = "<group>"; };
-		919418F81B02CE64006E448C /* ProfileTableTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableTableViewController.swift; sourceTree = "<group>"; };
-		919418FA1B02CEE2006E448C /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
+		919418F81B02CE64006E448C /* ReposTableTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReposTableTableViewController.swift; sourceTree = "<group>"; };
+		919418FA1B02CEE2006E448C /* RepoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,11 +91,12 @@
 			children = (
 				919418D01B02390A006E448C /* Main.storyboard */,
 				919418EC1B02402B006E448C /* FriendTableViewController.swift */,
-				919418F21B0285B5006E448C /* friendTableViewCell.swift */,
-				919418F81B02CE64006E448C /* ProfileTableTableViewController.swift */,
-				919418FA1B02CEE2006E448C /* ProfileTableViewCell.swift */,
+				919418F21B0285B5006E448C /* FriendTableViewCell.swift */,
+				919418F81B02CE64006E448C /* ReposTableTableViewController.swift */,
+				919418FA1B02CEE2006E448C /* RepoTableViewCell.swift */,
 				919418F41B02C2C4006E448C /* roundedButtons.swift */,
 				919418EE1B0283B9006E448C /* avatarView.swift */,
+				916592981B0397AE00C38115 /* GitHubRequest.swift */,
 				919418CA1B02390A006E448C /* Supporting Files */,
 			);
 			path = GithubFriends;
@@ -228,12 +231,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				919418CD1B02390A006E448C /* AppDelegate.swift in Sources */,
-				919418FB1B02CEE2006E448C /* ProfileTableViewCell.swift in Sources */,
+				919418FB1B02CEE2006E448C /* RepoTableViewCell.swift in Sources */,
+				916592991B0397AE00C38115 /* GitHubRequest.swift in Sources */,
 				919418F51B02C2C4006E448C /* roundedButtons.swift in Sources */,
 				919418ED1B02402B006E448C /* FriendTableViewController.swift in Sources */,
 				919418EF1B0283B9006E448C /* avatarView.swift in Sources */,
-				919418F91B02CE64006E448C /* ProfileTableTableViewController.swift in Sources */,
-				919418F31B0285B5006E448C /* friendTableViewCell.swift in Sources */,
+				919418F91B02CE64006E448C /* ReposTableTableViewController.swift in Sources */,
+				919418F31B0285B5006E448C /* FriendTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,6 +433,7 @@
 				919418E81B02390A006E448C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		919418E91B02390A006E448C /* Build configuration list for PBXNativeTarget "GithubFriendsTests" */ = {
 			isa = XCConfigurationList;
@@ -437,6 +442,7 @@
 				919418EB1B02390A006E448C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

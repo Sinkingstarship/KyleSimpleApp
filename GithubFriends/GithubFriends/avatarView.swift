@@ -12,6 +12,7 @@ class avatarView: UIImageView {
     
     var cornerRadius = 10
     
+    
     /*
     // Only override drawRect: if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.

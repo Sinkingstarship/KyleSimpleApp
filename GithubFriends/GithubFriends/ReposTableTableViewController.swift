@@ -8,11 +8,49 @@
 
 import UIKit
 
-class ProfileTableTableViewController: UITableViewController {
+class ReposTableTableViewController: UITableViewController {
 
-    var profileInfo: [[String:AnyObject?]] = [
+    var friendInfo: [String:AnyObject?]! {
         
-    ]
+        didSet {
+            
+            navigationItem.title = "REPOS"
+            navigationItem.prompt = friendInfo["name"] as? String
+            
+            let reposEndpoint = friendInfo["repos_url"] as! String
+            
+            if let reposInfo = GitHubRequest.getInfoWithEndpoint(reposEndpoint) as? [[String:AnyObject]] {
+                
+                println(reposInfo)
+                repos = reposInfo
+                tableView.reloadData()
+                
+                
+                
+            }
+            
+            
+        }
+        
+        
+    }
+    
+
+        
+
+    
+    
+        
+        
+
+
+    
+    
+    var repos: [[String:AnyObject]] = []
+    
+    @IBOutlet weak var DetailTitle: UINavigationItem!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,8 +60,9 @@ class ProfileTableTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+
         
-        
+      //  DetailTitle.
         
     }
 
@@ -34,24 +73,26 @@ class ProfileTableTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Potentially incomplete method implementation.
-        // Return the number of sections.
-        return 0
-    }
+//    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+//        // #warning Potentially incomplete method implementation.
+//        // Return the number of sections.
+//        return
+//    }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return 0
+        return repos.count
     }
 
     
-//    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-//        
-//        let cell = tableView.dequeueReusableCellWithIdentifier("profileCell", forIndexPath: indexPath) as! ProfileTableViewCell
-//        
-//        
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCellWithIdentifier("repoCell", forIndexPath: indexPath) as! UITableViewCell
+        
+        
+        
+        
 //        var repos = profileInfo[indexPath.row]["repos_url"] as? String
 //        var appDescription = profileInfo[indexPath.row]["repos_url"] as?  String
 //        var dateLabel =
@@ -63,9 +104,10 @@ class ProfileTableTableViewController: UITableViewController {
 //        }
 
         
-        // Configure the cell...
+//         Configure the cell...
+        cell.textLabel?.text = repos[indexPath.row]["name"] as? String
 
-//        return cell
+        return cell
     }
     
 
@@ -114,4 +156,4 @@ class ProfileTableTableViewController: UITableViewController {
     }
     */
 
-// }
+ }
