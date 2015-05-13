@@ -127,17 +127,23 @@ class FriendTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCellWithIdentifier("friendCell", forIndexPath: indexPath) as! friendTableViewCell
-        var repos = friends[indexPath.row]["public_repos"] as? String
-        var gists = friends[indexPath.row]["public_gists"] as? String
+        
+        if var repos = friends[indexPath.row]["public_repos"] as? Int {
+                cell.reposButton.setTitle("Repos \(repos)", forState: UIControlState.Normal)
+        }
+        
+        if var gists = friends[indexPath.row]["public_gists"] as? Int {
+                cell.gistsButton.setTitle("Gists \(gists)", forState: UIControlState.Normal)
+        }
         
         
         cell.avatarViewBox.layer.cornerRadius = 10
         
         cell.nameLabel.text = friends[indexPath.row]["name"] as? String
         
-        cell.reposButton.setTitle("Repos \(repos)", forState: UIControlState.Normal)
         
-        cell.gistsButton.setTitle("Gists \(gists)", forState: UIControlState.Normal)
+        
+        
         
         
         if let url = NSURL(string: friends[indexPath.row]["avatar_url"] as! String) {
@@ -146,7 +152,6 @@ class FriendTableViewController: UITableViewController {
         }
 
         
-//        avatarView.image =
         
 
         // Configure the cell...

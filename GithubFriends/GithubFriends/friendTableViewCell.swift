@@ -19,6 +19,14 @@ class friendTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        reposButton.layer.cornerRadius = 10
+        reposButton.layer.borderWidth = 1
+        reposButton.layer.borderColor = UIColor.blackColor().CGColor
+        gistsButton.layer.cornerRadius = 10
+        gistsButton.layer.borderWidth = 1
+        gistsButton.layer.borderColor = UIColor.blackColor().CGColor
+
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
