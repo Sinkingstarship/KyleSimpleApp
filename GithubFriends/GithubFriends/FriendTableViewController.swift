@@ -10,9 +10,7 @@ import UIKit
 
 class FriendTableViewController: UITableViewController {
     
-    @IBOutlet weak var friendNameField: UITextField!
-   // @IBOutlet weak var avatarView: avatarView!
-   
+
     
     var friends: [[String:AnyObject?]] = [
         
@@ -69,29 +67,9 @@ class FriendTableViewController: UITableViewController {
     }
     
     
-    @IBAction func addFriend(sender: AnyObject) {
-        
-        let endpoint = "https://api.github.com/users/\(friendNameField.text)"
-        
 
         
-        println(endpoint)
-        
-        if let friendInfo = GitHubRequest.getInfoWithEndpoint(endpoint) as? [String:AnyObject] {
-            
-            println(friendInfo)
-            
-            friends.insert(friendInfo, atIndex: 0)
-            tableView.reloadData()
-
-        }
-        
-    
-        
-        
-        friendNameField.text = ""
-        
-    }
+  
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -208,15 +186,21 @@ class FriendTableViewController: UITableViewController {
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-        // The below isn't force unwrapping it, the destination view controller is not an optional.
+        if segue.identifier == "reposSegue" {
+
+            // The below isn't force unwrapping it, the destination view controller is not an optional.
         
-        var reposTVC = segue.destinationViewController as! ReposTableTableViewController
+            var reposTVC = segue.destinationViewController as! ReposTableTableViewController
         
-        var reposButton = sender as! UIButton
+            var reposButton = sender as! UIButton
         
-        reposTVC.friendInfo = friends[reposButton.tag]
+            reposTVC.friendInfo = friends[reposButton.tag]
+    
+        }
         
         // Get the new view controller using [segue destinationViewController].
         // Pass the selected object to the new view controller.

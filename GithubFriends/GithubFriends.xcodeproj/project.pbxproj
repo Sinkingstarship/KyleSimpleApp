@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		916592991B0397AE00C38115 /* GitHubRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916592981B0397AE00C38115 /* GitHubRequest.swift */; };
+		9165929B1B03AC0A00C38115 /* AddFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9165929A1B03AC0A00C38115 /* AddFriendViewController.swift */; };
 		919418CD1B02390A006E448C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919418CC1B02390A006E448C /* AppDelegate.swift */; };
 		919418D21B02390A006E448C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 919418D01B02390A006E448C /* Main.storyboard */; };
 		919418D41B02390A006E448C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 919418D31B02390A006E448C /* Images.xcassets */; };
@@ -33,6 +34,7 @@
 
 /* Begin PBXFileReference section */
 		916592981B0397AE00C38115 /* GitHubRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubRequest.swift; sourceTree = "<group>"; };
+		9165929A1B03AC0A00C38115 /* AddFriendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFriendViewController.swift; sourceTree = "<group>"; };
 		919418C71B02390A006E448C /* GithubFriends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubFriends.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		919418CB1B02390A006E448C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		919418CC1B02390A006E448C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -94,9 +96,11 @@
 				919418F21B0285B5006E448C /* FriendTableViewCell.swift */,
 				919418F81B02CE64006E448C /* ReposTableTableViewController.swift */,
 				919418FA1B02CEE2006E448C /* RepoTableViewCell.swift */,
+				9165929A1B03AC0A00C38115 /* AddFriendViewController.swift */,
 				919418F41B02C2C4006E448C /* roundedButtons.swift */,
 				919418EE1B0283B9006E448C /* avatarView.swift */,
 				916592981B0397AE00C38115 /* GitHubRequest.swift */,
+				919418CC1B02390A006E448C /* AppDelegate.swift */,
 				919418CA1B02390A006E448C /* Supporting Files */,
 			);
 			path = GithubFriends;
@@ -105,7 +109,6 @@
 		919418CA1B02390A006E448C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				919418CC1B02390A006E448C /* AppDelegate.swift */,
 				919418D31B02390A006E448C /* Images.xcassets */,
 				919418D51B02390A006E448C /* LaunchScreen.xib */,
 				919418CB1B02390A006E448C /* Info.plist */,
@@ -233,6 +236,7 @@
 				919418CD1B02390A006E448C /* AppDelegate.swift in Sources */,
 				919418FB1B02CEE2006E448C /* RepoTableViewCell.swift in Sources */,
 				916592991B0397AE00C38115 /* GitHubRequest.swift in Sources */,
+				9165929B1B03AC0A00C38115 /* AddFriendViewController.swift in Sources */,
 				919418F51B02C2C4006E448C /* roundedButtons.swift in Sources */,
 				919418ED1B02402B006E448C /* FriendTableViewController.swift in Sources */,
 				919418EF1B0283B9006E448C /* avatarView.swift in Sources */,
