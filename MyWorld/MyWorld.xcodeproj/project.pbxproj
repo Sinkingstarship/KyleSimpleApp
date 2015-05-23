@@ -14,7 +14,6 @@
 		91A9F0311B0E15E2000770BD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91A9F02F1B0E15E2000770BD /* LaunchScreen.xib */; };
 		91A9F03D1B0E15E2000770BD /* MyWorldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A9F03C1B0E15E2000770BD /* MyWorldTests.swift */; };
 		91A9F0AB1B0F9ED7000770BD /* VenueDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A9F0AA1B0F9ED7000770BD /* VenueDetailViewController.swift */; };
-		91A9F0AD1B0FB693000770BD /* MapData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A9F0AC1B0FB693000770BD /* MapData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +38,6 @@
 		91A9F03B1B0E15E2000770BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91A9F03C1B0E15E2000770BD /* MyWorldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWorldTests.swift; sourceTree = "<group>"; };
 		91A9F0AA1B0F9ED7000770BD /* VenueDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenueDetailViewController.swift; sourceTree = "<group>"; };
-		91A9F0AC1B0FB693000770BD /* MapData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,14 +79,10 @@
 		91A9F0231B0E15E2000770BD /* MyWorld */ = {
 			isa = PBXGroup;
 			children = (
-				91A9F0261B0E15E2000770BD /* AppDelegate.swift */,
 				91A9F0281B0E15E2000770BD /* ViewController.swift */,
 				91A9F0AA1B0F9ED7000770BD /* VenueDetailViewController.swift */,
 				91A9F02A1B0E15E2000770BD /* Main.storyboard */,
-				91A9F02D1B0E15E2000770BD /* Images.xcassets */,
-				91A9F02F1B0E15E2000770BD /* LaunchScreen.xib */,
 				91A9F0241B0E15E2000770BD /* Supporting Files */,
-				91A9F0AC1B0FB693000770BD /* MapData.swift */,
 			);
 			path = MyWorld;
 			sourceTree = "<group>";
@@ -96,6 +90,9 @@
 		91A9F0241B0E15E2000770BD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				91A9F0261B0E15E2000770BD /* AppDelegate.swift */,
+				91A9F02D1B0E15E2000770BD /* Images.xcassets */,
+				91A9F02F1B0E15E2000770BD /* LaunchScreen.xib */,
 				91A9F0251B0E15E2000770BD /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -218,7 +215,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				91A9F0AD1B0FB693000770BD /* MapData.swift in Sources */,
 				91A9F0AB1B0F9ED7000770BD /* VenueDetailViewController.swift in Sources */,
 				91A9F0291B0E15E2000770BD /* ViewController.swift in Sources */,
 				91A9F0271B0E15E2000770BD /* AppDelegate.swift in Sources */,

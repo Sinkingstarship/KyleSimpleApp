@@ -21,7 +21,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     
     var lManager = CLLocationManager()
     
-    var allVenuses: [[String:AnyObject]] = []
+    var allVenues: [[String:AnyObject]] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,7 +47,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
             requestVenuesWithLocation(location, completion: { (venues) -> () in
                 
                 println(venues)
-                self.allVenuses = venues as! [[String:AnyObject]]
+                self.allVenues = venues as! [[String:AnyObject]]
                 
                 for (index, venue) in enumerate(venues as! [[String:AnyObject]]) {
                     
@@ -67,6 +67,16 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
                                 self.myMapView.addAnnotation(annotation)
                                 
                         }
+                        
+                        //////// New code below
+                        
+                        if let address = venue["address"] as? [String:AnyObject] {
+                            let country = venue["country"] as? [String:AnyObject]
+                            let city = venue["city"] as? [String:AnyObject]
+                            let state = venue["state"] as? [String:AnyObject]
+                        }
+                        
+                        
                         
                     }
                     
@@ -146,16 +156,47 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         
         var detailVC = storyboard?.instantiateViewControllerWithIdentifier("venueVC") as! VenueDetailViewController
         
-        detailVC.venueInfo = allVenuses[sender.tag]
+        var venue = allVenues[sender.tag]
         
         detailVC.view.backgroundColor = UIColor.whiteColor()
         
+
+        
+        if let location = venue["location"] as? [String:AnyObject] {
+
+            let address = location["address"] as? [String:AnyObject]
+            let city = location["city"] as? [String:AnyObject]
+            let state = location["state"] as? [String:AnyObject]
+            
+            
+            
+        }
+        
+        if let category = venue["categories"] as? [String:AnyObject] {
+            
+            let category = category["name"] as? [String:AnyObject]
+
+        }
+        
+        
+        var box1 = UIView(frame: CGRectMake(30, 70, 8, 46))
+        box1.backgroundColor = UIColor.grayColor()
+        detailVC.view.addSubview(box1)
+        
+        var box2 = UIView(frame: CGRectMake(30, 130, 8, 230))
+        box2.backgroundColor = UIColor.grayColor()
+        detailVC.view.addSubview(box2)
+        
+        var box3 = UIView(frame: CGRectMake(30, 385, 8, 60))
+        box3.backgroundColor = UIColor.grayColor()
+        detailVC.view.addSubview(box3)
+        
         detailVC.navigationItem.title = detailVC.venueInfo["name"] as? String
+        detailVC.navigationItem.title = detailVC.usersCircle["bob"] as? String
         
-        var box = UIView(frame: CGRectMake(20, 20, 100, 100))
-        box.backgroundColor = UIColor.blueColor()
         
-        detailVC.view.addSubview(box)
+        
+        
         
         navigationController?.pushViewController(detailVC, animated: true)
         
