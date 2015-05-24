@@ -15,7 +15,9 @@ class VenueDetailViewController: UIViewController {
     @IBOutlet weak var tipsCircle: UIButton!
     @IBOutlet weak var iconView: UIView!
     
-    
+    @IBOutlet weak var categoryLabel: UILabel!
+    @IBOutlet weak var addressLabel: UILabel!
+    @IBOutlet weak var hereNowLabel: UILabel!
     
     var venueInfo: [String:AnyObject]!
     

@@ -46,7 +46,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
             
             requestVenuesWithLocation(location, completion: { (venues) -> () in
                 
-                println(venues)
+              //  println(venues)
                 self.allVenues = venues as! [[String:AnyObject]]
                 
                 for (index, venue) in enumerate(venues as! [[String:AnyObject]]) {
@@ -111,7 +111,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
                 
                 if let returnedInfo = NSJSONSerialization.JSONObjectWithData(data, options: .MutableContainers, error: nil) as? [String:AnyObject] {
                     
-                    println(returnedInfo)
+                  //  println(returnedInfo)
                     
                     if let responseInfo = returnedInfo["response"] as? [String:AnyObject] {
                         
@@ -157,26 +157,61 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         var detailVC = storyboard?.instantiateViewControllerWithIdentifier("venueVC") as! VenueDetailViewController
         
         var venue = allVenues[sender.tag]
+//        println(venue)
         
         detailVC.view.backgroundColor = UIColor.whiteColor()
         
-
+        if let stats = venue["stats"] as? [String:AnyObject] {
+            
+            let checkInCount = stats["checkinsCount"] as! Int
+            let usersCount = stats["usersCount"] as! Int
+            let tipCount = stats["tipCount"] as! Int
+            let name = venue["name"] as! String
+            
+            detailVC.checkingCircle.setTitle("\(checkInCount)", forState: UIControlState.Normal)
+            detailVC.usersCircle.setTitle("\(usersCount)", forState: UIControlState.Normal)
+            detailVC.tipsCircle.setTitle("\(tipCount)", forState: UIControlState.Normal)
+            
+        }
+        
+        if let categories = venue["categories"] as? [AnyObject] {
+            
+            let insideCategories = categories[0]
+            let category = insideCategories["name"] as! String
+            let icon = insideCategories["icon"] as? [String:AnyObject] {
+                
+                let prefix = icon["prefix"] as! String
+                let suffix = icon["suffix"] as! String
+                
+                
+                
+            }
+            detailVC.categoryLabel.text = category
+            
+        }
+            
+        
+        
         
         if let location = venue["location"] as? [String:AnyObject] {
 
-            let address = location["address"] as? [String:AnyObject]
-            let city = location["city"] as? [String:AnyObject]
-            let state = location["state"] as? [String:AnyObject]
+            let address = location["address"] as! String
+            let city = location["city"] as! String
+            let state = location["state"] as! String
+            let name = venue["name"] as! String
             
-            
+            detailVC.addressLabel.text = "\(address), \(city) \(state)"
+            detailVC.navigationItem.title = name
             
         }
         
-        if let category = venue["categories"] as? [String:AnyObject] {
+        if let hereNow = venue["hereNow"] as? [String:AnyObject] {
             
-            let category = category["name"] as? [String:AnyObject]
-
+            let summary = hereNow["summary"] as! String
+            detailVC.hereNowLabel.text = summary
         }
+        
+        if let
         
         
         var box1 = UIView(frame: CGRectMake(30, 70, 8, 46))
@@ -191,12 +226,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         box3.backgroundColor = UIColor.grayColor()
         detailVC.view.addSubview(box3)
         
-        detailVC.navigationItem.title = detailVC.venueInfo["name"] as? String
-        detailVC.navigationItem.title = detailVC.usersCircle["bob"] as? String
-        
-        
-        
-        
+
         
         navigationController?.pushViewController(detailVC, animated: true)
         

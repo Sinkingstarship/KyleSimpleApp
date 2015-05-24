@@ -85,6 +85,16 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CATEGORY" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="koS-zw-eDW">
+                                <rect key="frame" x="184" y="84" width="104" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="104" id="OhW-o7-hPX"/>
+                                    <constraint firstAttribute="height" constant="18" id="ulp-iT-r9M"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="10"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ADDRESS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="akR-xy-gs9">
                                 <rect key="frame" x="184" y="142" width="104" height="18"/>
                                 <constraints>
@@ -135,17 +145,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HERE NOW" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ptI-AC-vRX">
-                                <rect key="frame" x="184" y="400" width="70" height="18"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="18" id="ITJ-Vh-sCq"/>
-                                    <constraint firstAttribute="width" constant="70" id="f4r-Fu-17a"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="10"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address Goes Here" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cZ7-LO-LBf">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address Goes Here" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cZ7-LO-LBf">
                                 <rect key="frame" x="184" y="168" width="199" height="72"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="199" id="vVP-sQ-jDf"/>
@@ -177,17 +177,17 @@
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WEc-fd-e2N">
                                 <rect key="frame" x="391" y="90" width="44" height="44"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="44" id="ZUC-aE-OKv"/>
                                     <constraint firstAttribute="height" constant="44" id="bKK-2s-AUS"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CATEGORY" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="koS-zw-eDW">
-                                <rect key="frame" x="184" y="84" width="104" height="18"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HERE NOW" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ptI-AC-vRX">
+                                <rect key="frame" x="184" y="400" width="70" height="18"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="104" id="OhW-o7-hPX"/>
-                                    <constraint firstAttribute="height" constant="18" id="ulp-iT-r9M"/>
+                                    <constraint firstAttribute="height" constant="18" id="ITJ-Vh-sCq"/>
+                                    <constraint firstAttribute="width" constant="70" id="f4r-Fu-17a"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="10"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -227,7 +227,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="addressLabel" destination="cZ7-LO-LBf" id="jBG-lb-DjN"/>
+                        <outlet property="categoryLabel" destination="WvX-sv-K68" id="sNv-7i-PX5"/>
                         <outlet property="checkingCircle" destination="wZr-co-clb" id="ILc-J5-bZE"/>
+                        <outlet property="hereNowLabel" destination="R6L-RK-9pT" id="1hx-og-ZRq"/>
                         <outlet property="iconView" destination="WEc-fd-e2N" id="gbD-Li-cqa"/>
                         <outlet property="tipsCircle" destination="8aV-rO-R15" id="8Sl-DM-Z5B"/>
                         <outlet property="usersCircle" destination="F4P-fs-xEF" id="loH-EU-FpZ"/>
