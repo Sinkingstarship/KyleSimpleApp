@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		910C09C81B126067006F9CAB /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 910C09C61B126067006F9CAB /* Fabric.framework */; };
+		910C09C91B126067006F9CAB /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 910C09C71B126067006F9CAB /* Crashlytics.framework */; };
 		91A9F0271B0E15E2000770BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A9F0261B0E15E2000770BD /* AppDelegate.swift */; };
 		91A9F0291B0E15E2000770BD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A9F0281B0E15E2000770BD /* ViewController.swift */; };
 		91A9F02C1B0E15E2000770BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91A9F02A1B0E15E2000770BD /* Main.storyboard */; };
@@ -27,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		910C09C61B126067006F9CAB /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		910C09C71B126067006F9CAB /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		91A9F0211B0E15E2000770BD /* MyWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91A9F0251B0E15E2000770BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91A9F0261B0E15E2000770BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +49,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				910C09C91B126067006F9CAB /* Crashlytics.framework in Frameworks */,
+				910C09C81B126067006F9CAB /* Fabric.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +100,8 @@
 				91A9F02D1B0E15E2000770BD /* Images.xcassets */,
 				91A9F02F1B0E15E2000770BD /* LaunchScreen.xib */,
 				91A9F0251B0E15E2000770BD /* Info.plist */,
+				910C09C61B126067006F9CAB /* Fabric.framework */,
+				910C09C71B126067006F9CAB /* Crashlytics.framework */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -125,6 +133,7 @@
 				91A9F01D1B0E15E2000770BD /* Sources */,
 				91A9F01E1B0E15E2000770BD /* Frameworks */,
 				91A9F01F1B0E15E2000770BD /* Resources */,
+				910C09C51B125FDD006F9CAB /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -209,6 +218,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		910C09C51B125FDD006F9CAB /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run da87a3a0eabf0596da50912311d2188fcbd64c94 0fad7c93626d7648ab5e93efd004f5d692a8c2ae9a3bb3cbc7bcf78f7a1e741f";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		91A9F01D1B0E15E2000770BD /* Sources */ = {
@@ -346,6 +371,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MyWorld",
+				);
 				INFOPLIST_FILE = MyWorld/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -356,6 +385,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MyWorld",
+				);
 				INFOPLIST_FILE = MyWorld/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

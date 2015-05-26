@@ -8,6 +8,9 @@
 
 import UIKit
 import MapKit
+import Crashlytics
+
+
 
 class MyAnnotation: MKPointAnnotation {
     
@@ -178,18 +181,19 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
             
             let insideCategories = categories[0]
             let category = insideCategories["name"] as! String
-            let icon = insideCategories["icon"] as? [String:AnyObject] {
-                
-                let prefix = icon["prefix"] as! String
-                let suffix = icon["suffix"] as! String
-                
-                
-                
-            }
-            detailVC.categoryLabel.text = category
-            
+//            let icon = insideCategories["icon"] as? [String:AnyObject] {
+//                
+//                let prefix = icon["prefix"] as! String
+//                let suffix = icon["suffix"] as! String
+//                
+//            
+//                
+//            }
+//            detailVC.categoryLabel.text = category
+//            
         }
-            
+        
+     
         
         
         
@@ -211,7 +215,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
             detailVC.hereNowLabel.text = summary
         }
         
-        if let
         
         
         var box1 = UIView(frame: CGRectMake(30, 70, 8, 46))
@@ -229,6 +232,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
 
         
         navigationController?.pushViewController(detailVC, animated: true)
+        
+
         
     }
     

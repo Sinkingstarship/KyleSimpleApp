@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Crashlytics
 
 class VenueDetailViewController: UIViewController {
 
@@ -18,6 +19,14 @@ class VenueDetailViewController: UIViewController {
     @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var hereNowLabel: UILabel!
+    
+    @IBAction func checkinsCrash(sender: AnyObject) {
+
+        Crashlytics.sharedInstance().crash()
+        
+    }
+    
+    
     
     var venueInfo: [String:AnyObject]!
     
