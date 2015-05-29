@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Favorites" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aVt-lT-FFd">
+                                <rect key="frame" x="470" y="30" width="120" height="30"/>
+                                <color key="backgroundColor" red="0.60658169750000002" green="0.3307404223" blue="0.97254997489999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="FK6-eX-XqZ"/>
+                                    <constraint firstAttribute="height" constant="40" id="Fla-1s-qcQ"/>
+                                    <constraint firstAttribute="height" constant="30" id="T7I-dU-NJL"/>
+                                    <constraint firstAttribute="height" constant="40" id="q9W-C6-dQJ"/>
+                                </constraints>
+                                <state key="normal" title="Add">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Fla-1s-qcQ"/>
+                                        <exclude reference="q9W-C6-dQJ"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="addFavorite:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CVL-He-HMi"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Magic Placeholder Text" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OBC-vU-or2">
+                                <rect key="frame" x="10" y="30" width="450" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="JOd-8W-B2E"/>
+                                    <constraint firstAttribute="height" constant="30" id="JUU-OC-lv8"/>
+                                    <constraint firstAttribute="height" constant="40" id="pNo-Sb-spn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="JOd-8W-B2E"/>
+                                        <exclude reference="pNo-Sb-spn"/>
+                                    </mask>
+                                </variation>
+                            </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="5W9-vV-OOj">
+                                <rect key="frame" x="0.0" y="70" width="600" height="530"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="favoriteCell" id="hWC-T6-Pyr">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hWC-T6-Pyr" id="MjR-1M-ulo">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="OBC-vU-or2" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="1fI-0D-FrJ"/>
+                            <constraint firstItem="OBC-vU-or2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="4hi-aU-61A"/>
+                            <constraint firstAttribute="trailing" secondItem="aVt-lT-FFd" secondAttribute="trailing" constant="10" id="5yM-gS-dhz"/>
+                            <constraint firstItem="aVt-lT-FFd" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="10" id="D12-rI-rEH"/>
+                            <constraint firstItem="OBC-vU-or2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="EqA-nX-xsh"/>
+                            <constraint firstItem="aVt-lT-FFd" firstAttribute="leading" secondItem="OBC-vU-or2" secondAttribute="trailing" constant="10" id="GDh-fi-SL8"/>
+                            <constraint firstItem="aVt-lT-FFd" firstAttribute="leading" secondItem="OBC-vU-or2" secondAttribute="trailing" constant="10" id="GIt-tr-2FU"/>
+                            <constraint firstItem="5W9-vV-OOj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="K1W-ld-Hmx"/>
+                            <constraint firstAttribute="trailing" secondItem="aVt-lT-FFd" secondAttribute="trailing" constant="16" id="OIl-Pi-a7k"/>
+                            <constraint firstAttribute="trailing" secondItem="5W9-vV-OOj" secondAttribute="trailing" id="PwE-XH-8An"/>
+                            <constraint firstItem="5W9-vV-OOj" firstAttribute="top" secondItem="OBC-vU-or2" secondAttribute="bottom" constant="10" id="Qiy-cg-MCr"/>
+                            <constraint firstItem="aVt-lT-FFd" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="Ydo-3L-bN6"/>
+                            <constraint firstItem="aVt-lT-FFd" firstAttribute="leading" secondItem="OBC-vU-or2" secondAttribute="trailing" constant="8" id="Zuz-oc-gQo"/>
+                            <constraint firstItem="OBC-vU-or2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="t1w-Cn-gnU"/>
+                            <constraint firstItem="OBC-vU-or2" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="265" id="thq-Z6-NbC"/>
+                            <constraint firstItem="aVt-lT-FFd" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="265" id="tv9-cE-Jve"/>
+                            <constraint firstItem="aVt-lT-FFd" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="uVE-BJ-pu0"/>
+                            <constraint firstItem="OBC-vU-or2" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="xMu-Xe-YUs"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5W9-vV-OOj" secondAttribute="bottom" id="xxb-08-xLo"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="1fI-0D-FrJ"/>
+                                <exclude reference="EqA-nX-xsh"/>
+                                <exclude reference="t1w-Cn-gnU"/>
+                                <exclude reference="thq-Z6-NbC"/>
+                                <exclude reference="D12-rI-rEH"/>
+                                <exclude reference="GIt-tr-2FU"/>
+                                <exclude reference="OIl-Pi-a7k"/>
+                                <exclude reference="Zuz-oc-gQo"/>
+                                <exclude reference="tv9-cE-Jve"/>
+                                <exclude reference="uVE-BJ-pu0"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="favoriteTextField" destination="OBC-vU-or2" id="yg6-kc-KhU"/>
+                        <outlet property="favoritesTableView" destination="5W9-vV-OOj" id="cOU-yC-n56"/>
+                        <outlet property="purpleButton" destination="aVt-lT-FFd" id="4Km-MI-NgF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
