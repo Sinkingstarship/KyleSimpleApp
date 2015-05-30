@@ -17,7 +17,7 @@ class LoginViewController: UIViewController {
     
     @IBAction func loginButton(sender: AnyObject) {
         
-        
+        loginNow()
         
     }
     
@@ -44,6 +44,7 @@ class LoginViewController: UIViewController {
             
             if user != nil {
                 
+    
                 println("Successful login!")
                 
             } else {
