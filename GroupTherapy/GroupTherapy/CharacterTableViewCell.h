@@ -13,6 +13,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *characterImage;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabelOutlet;
 @property (weak, nonatomic) IBOutlet UILabel *comicIssueLabel;
+@property (weak, nonatomic) IBOutlet UIView *circleView;
 
 
 

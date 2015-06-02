@@ -25,7 +25,6 @@
 {
     NSArray * characters;
     
-    
 }
 
 
@@ -33,6 +32,7 @@
     [super viewDidLoad];
     
     characters = @[];
+    
     
     [self loadItems];
     
@@ -43,13 +43,27 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    float scrollViewHeight = scrollView.frame.size.height;
+    float scrollContentSizeHeight = scrollView.contentSize.height;
+    float scrollOffset = scrollView.contentOffset.y;
+    
+    if (scrollOffset == 0) {
+        
+    } else if (scrollOffset + scrollViewHeight == scrollContentSizeHeight) {
+        [self loadItems];
+    }
+    
+    
+    
+    
+}
+
 - (void)loadItems {
     
     int timeStamp = [NSDate date].timeIntervalSince1970;
     
     NSString * hash = [self MD5String:[NSString stringWithFormat:@"%d%@%@", timeStamp, PRIVATE_KEY, PUBLIC_KEY]];
-    
-    // base url, endpoint, parameters
     
     NSString * endpoint = [NSString stringWithFormat:@"%@characters?limit=50&offset=%d&ts=%d&apikey=%@&hash=%@", API_BASE, (int)characters.count, timeStamp, PUBLIC_KEY, hash];
     
@@ -63,11 +77,11 @@
         
         //        NSLog(@"%@", JSON);
         
-        characters = JSON[@"data"][@"results"];
+        characters = [characters arrayByAddingObjectsFromArray:JSON[@"data"][@"results"]];
         
         
-        NSLog(@"%@", characters);
-        
+//        NSLog(@"%@", characters);
+                
         [self.tableView reloadData];
         
         
@@ -76,21 +90,7 @@
 
 }
 
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    float scrollViewHeight = scrollView.frame.size.height;
-    float scrollContentSizeHeight = scrollView.contentSize.height;
-    float scrollOffset = scrollView.contentOffset.y;
-    
-    if (scrollOffset ==0) {
-        
-    } else if (scrollOffset + scrollViewHeight == scrollContentSizeHeight) {
-        [self loadItems];
-    }
-    
 
-
-
-}
 
 - (NSString *)MD5String:(NSString *)str {
     // Create pointer to the string as UTF8
@@ -131,45 +131,54 @@
 }
 
 
-- (CharacterTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     CharacterTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"characterCell" forIndexPath:indexPath];
     
     // Configure the cell...
     
+
+    
     NSDictionary * character = characters[indexPath.row];
     
     cell.nameLabelOutlet.text = character[@"name"];
+
     
-//    NSLog(@"%@",character[@"thumbnail"]);
+    int numberIssuesInt = [character[@"comics"][@"available"] intValue];
     
-dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+    NSString * numberIssuesStr = [NSString stringWithFormat:@"%i", numberIssuesInt];
     
-    if (character[@"thumbnail"] != nil && character[@"thumbnail"] != [NSNull null]) {
-        
-        NSString * images = character[@"thumbnail"][@"path"];
-        NSString * extension = character[@"thumbnail"][@"extension"];
-        
-        NSString * fullImage = [NSString stringWithFormat:@"%@/portrait_medium.%@", images, extension];
-        
-        NSLog(@"%@",fullImage);
-        
-        NSURL * imageURL = [NSURL URLWithString: fullImage];
-        
-        NSData * imageData = [NSData dataWithContentsOfURL: imageURL];
-        
-        
-        dispatch_async(dispatch_get_main_queue(), ^{
-            UIImage * cellImage = [UIImage imageWithData: imageData];
+    cell.comicIssueLabel.text = numberIssuesStr;
+    
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+    
+        if (character[@"thumbnail"] != nil && character[@"thumbnail"] != [NSNull null]) {
             
-            cell.characterImage.image = cellImage;
+            NSString * images = character[@"thumbnail"][@"path"];
+            NSString * extension = character[@"thumbnail"][@"extension"];
+            
+            NSString * fullImage = [NSString stringWithFormat:@"%@/portrait_medium.%@", images, extension];
+            
+//            NSLog(@"%@",fullImage);
+            
+            NSURL * imageURL = [NSURL URLWithString: fullImage];
+            
+            NSData * imageData = [NSData dataWithContentsOfURL: imageURL];
+            
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                UIImage * cellImage = [UIImage imageWithData: imageData];
+                
+                cell.characterImage.image = cellImage;
+            });
+            
+            }
+
         });
-        
-        }
+    
+    cell.circleView.layer.cornerRadius = 25;
 
-    });
-
-               
-               return cell;
+    return cell;
     
 }
 
