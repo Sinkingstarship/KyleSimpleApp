@@ -23,10 +23,10 @@
     
     [Parse setApplicationId:@"u5O0iVuNaWYkGjU49ifmimy5dLZHjObLPnjcwFOd" clientKey:@"ofboQ9MMoKpnWHuy6ysf0Hek6A8KcyhLnzeKpP6N"];
     
-//    [PFUser enableAutomaticUser];
+    [PFUser enableAutomaticUser];
     
 //    PFUser * user = [PFUser user];
-//    
+    
 //    user.username = @"Kyle";
 //    user.password = @"password";
 //    [user signUpInBackground];
@@ -53,6 +53,7 @@
     // Store the deviceToken in the current installation and save it to Parse.
     PFInstallation *currentInstallation = [PFInstallation currentInstallation];
     
+    NSLog(@"%@", deviceToken);
     
     // Users may have multiple devices.
 //    [PFUser currentUser][@"device"] = currentInstallation;
