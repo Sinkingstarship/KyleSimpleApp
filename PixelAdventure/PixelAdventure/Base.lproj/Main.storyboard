@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="LVB-YS-i5n">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+    </dependencies>
+    <scenes>
+        <!--Game View Controller-->
+        <scene sceneID="CtS-rA-C9T">
+            <objects>
+                <viewController id="LVB-YS-i5n" customClass="GameViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PCf-gQ-wO7"/>
+                        <viewControllerLayoutGuide type="bottom" id="b3d-qh-BLL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bdc-N1-crn" customClass="SKView">
+                        <rect key="frame" x="0.0" y="0.0" width="700" height="400"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mo1-Pe-7C0">
+                                <rect key="frame" x="55" y="352" width="40" height="40"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="FND-Yc-hSm"/>
+                                    <constraint firstAttribute="height" constant="40" id="XGG-li-fps"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="23"/>
+                                <state key="normal" title="S">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="moveButtonPressed:" destination="LVB-YS-i5n" eventType="touchUpInside" id="tMt-DI-cSf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o1o-nl-EFt">
+                                <rect key="frame" x="7" y="352" width="40" height="40"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="2ac-Bj-4CN"/>
+                                    <constraint firstAttribute="height" constant="40" id="rLt-MO-qyS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="23"/>
+                                <state key="normal" title="A">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pressedDown:" destination="LVB-YS-i5n" eventType="touchDown" id="uYV-Jp-zIP"/>
+                                    <action selector="releasedButton:" destination="LVB-YS-i5n" eventType="touchUpInside" id="UGb-Xi-1GP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CIG-kn-cYN">
+                                <rect key="frame" x="103" y="352" width="40" height="40"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="m4B-yW-nKp"/>
+                                    <constraint firstAttribute="width" constant="40" id="tMV-0q-T2j"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="23"/>
+                                <state key="normal" title="D">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pressedDown:" destination="LVB-YS-i5n" eventType="touchDown" id="ylx-GK-tfe"/>
+                                    <action selector="releasedButton:" destination="LVB-YS-i5n" eventType="touchUpInside" id="YKz-hu-aHi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kO0-nY-Eql">
+                                <rect key="frame" x="630" y="304" width="40" height="40"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="pQz-KU-9Bf"/>
+                                    <constraint firstAttribute="width" constant="40" id="xVD-wN-eUQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="23"/>
+                                <state key="normal" title="2">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="attackButtonPressed:" destination="LVB-YS-i5n" eventType="touchUpInside" id="jSm-H0-SQ6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J9h-fV-qs4">
+                                <rect key="frame" x="582" y="352" width="40" height="40"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="qQJ-sC-Mlq"/>
+                                    <constraint firstAttribute="height" constant="40" id="vFw-HR-QQs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="23"/>
+                                <state key="normal" title="1">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="attackButtonPressed:" destination="LVB-YS-i5n" eventType="touchUpInside" id="AzI-bF-utm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d1l-ti-WPc">
+                                <rect key="frame" x="55" y="302" width="40" height="40"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="ITY-yL-pxP"/>
+                                    <constraint firstAttribute="height" constant="40" id="Pd2-3g-eAt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="23"/>
+                                <state key="normal" title="W">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="moveButtonPressed:" destination="LVB-YS-i5n" eventType="touchUpInside" id="Ist-uG-mjb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="J9h-fV-qs4" secondAttribute="trailing" constant="78" id="96q-uh-CJc"/>
+                            <constraint firstAttribute="trailing" secondItem="kO0-nY-Eql" secondAttribute="trailing" constant="30" id="AWT-Gk-9DA"/>
+                            <constraint firstItem="mo1-Pe-7C0" firstAttribute="leading" secondItem="o1o-nl-EFt" secondAttribute="trailing" constant="8" id="D7i-lh-3aj"/>
+                            <constraint firstItem="mo1-Pe-7C0" firstAttribute="top" secondItem="d1l-ti-WPc" secondAttribute="bottom" constant="8" id="HTq-3J-rTl"/>
+                            <constraint firstItem="b3d-qh-BLL" firstAttribute="top" secondItem="kO0-nY-Eql" secondAttribute="bottom" constant="56" id="Kw7-WL-w8W"/>
+                            <constraint firstItem="b3d-qh-BLL" firstAttribute="top" secondItem="CIG-kn-cYN" secondAttribute="bottom" constant="8" id="M9i-9r-o78"/>
+                            <constraint firstItem="d1l-ti-WPc" firstAttribute="leading" secondItem="bdc-N1-crn" secondAttribute="leading" constant="55" id="SfD-VE-pox"/>
+                            <constraint firstItem="o1o-nl-EFt" firstAttribute="leading" secondItem="bdc-N1-crn" secondAttribute="leading" constant="7" id="XQF-oK-7x0"/>
+                            <constraint firstItem="b3d-qh-BLL" firstAttribute="top" secondItem="o1o-nl-EFt" secondAttribute="bottom" constant="8" id="mnJ-kL-8wJ"/>
+                            <constraint firstItem="CIG-kn-cYN" firstAttribute="leading" secondItem="mo1-Pe-7C0" secondAttribute="trailing" constant="8" id="tWG-Jx-nbW"/>
+                            <constraint firstItem="b3d-qh-BLL" firstAttribute="top" secondItem="mo1-Pe-7C0" secondAttribute="bottom" constant="8" id="wXf-AT-y1X"/>
+                            <constraint firstItem="b3d-qh-BLL" firstAttribute="top" secondItem="J9h-fV-qs4" secondAttribute="bottom" constant="8" id="yyu-GW-8p5"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="700" height="400"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="btX-cZ-eVz" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

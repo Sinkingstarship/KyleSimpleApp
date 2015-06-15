@@ -17,7 +17,7 @@
 
 #define PRIVATE_KEY @"0e21f85a25867806869bde11b27cd1c4edde5da1"
 
-@interface CharacterTableViewController () <UIScrollViewDelegate>
+@interface CharacterTableViewController () <UIScrollViewDelegate, UIScrollViewAccessibilityDelegate>
 
 @end
 

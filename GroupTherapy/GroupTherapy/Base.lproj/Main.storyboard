@@ -82,6 +82,7 @@
                             <outlet property="delegate" destination="aEY-a6-S1q" id="IqL-Wf-qsl"/>
                         </connections>
                     </tableView>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XUP-pc-iHs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
