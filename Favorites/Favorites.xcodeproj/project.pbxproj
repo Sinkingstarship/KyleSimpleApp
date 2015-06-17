@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		91185E131B30EF3B00F3A1AB /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91185E111B30EF3B00F3A1AB /* Bolts.framework */; };
+		91185E141B30EF3B00F3A1AB /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91185E121B30EF3B00F3A1AB /* Parse.framework */; };
 		91F87A601B175DC7009B920A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F87A5F1B175DC7009B920A /* AppDelegate.swift */; };
 		91F87A621B175DC7009B920A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F87A611B175DC7009B920A /* ViewController.swift */; };
 		91F87A651B175DC7009B920A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91F87A631B175DC7009B920A /* Main.storyboard */; };
@@ -15,8 +17,6 @@
 		91F87A761B175DC7009B920A /* FavoritesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F87A751B175DC7009B920A /* FavoritesTests.swift */; };
 		91F87A801B1762DC009B920A /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91F87A7F1B1762DC009B920A /* MobileCoreServices.framework */; };
 		91F87A821B17632C009B920A /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 91F87A811B17632C009B920A /* libsqlite3.dylib */; };
-		91F87A861B176340009B920A /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91F87A841B176340009B920A /* Bolts.framework */; };
-		91F87A871B176340009B920A /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91F87A851B176340009B920A /* Parse.framework */; };
 		91F87A891B176355009B920A /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91F87A881B176355009B920A /* AudioToolbox.framework */; };
 		91F87A8B1B17635A009B920A /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91F87A8A1B17635A009B920A /* CFNetwork.framework */; };
 		91F87A8D1B176360009B920A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91F87A8C1B176360009B920A /* CoreGraphics.framework */; };
@@ -39,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		91185E111B30EF3B00F3A1AB /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		91185E121B30EF3B00F3A1AB /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		91F87A5A1B175DC7009B920A /* Favorites.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Favorites.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91F87A5E1B175DC7009B920A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91F87A5F1B175DC7009B920A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -51,8 +53,6 @@
 		91F87A751B175DC7009B920A /* FavoritesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTests.swift; sourceTree = "<group>"; };
 		91F87A7F1B1762DC009B920A /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		91F87A811B17632C009B920A /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
-		91F87A841B176340009B920A /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "../../../../../../../Users/kylebrooksrobinson/Downloads/parse-library-1.7.4/Bolts.framework"; sourceTree = "<group>"; };
-		91F87A851B176340009B920A /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "../../../../../../../Users/kylebrooksrobinson/Downloads/parse-library-1.7.4/Parse.framework"; sourceTree = "<group>"; };
 		91F87A881B176355009B920A /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		91F87A8A1B17635A009B920A /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		91F87A8C1B176360009B920A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -72,16 +72,16 @@
 				91F87A991B176393009B920A /* libz.dylib in Frameworks */,
 				91F87A971B176389009B920A /* SystemConfiguration.framework in Frameworks */,
 				91F87A951B176382009B920A /* StoreKit.framework in Frameworks */,
+				91185E131B30EF3B00F3A1AB /* Bolts.framework in Frameworks */,
 				91F87A931B17637C009B920A /* Security.framework in Frameworks */,
 				91F87A911B176376009B920A /* QuartzCore.framework in Frameworks */,
+				91185E141B30EF3B00F3A1AB /* Parse.framework in Frameworks */,
 				91F87A801B1762DC009B920A /* MobileCoreServices.framework in Frameworks */,
 				91F87A8F1B176366009B920A /* CoreLocation.framework in Frameworks */,
 				91F87A8D1B176360009B920A /* CoreGraphics.framework in Frameworks */,
 				91F87A8B1B17635A009B920A /* CFNetwork.framework in Frameworks */,
 				91F87A891B176355009B920A /* AudioToolbox.framework in Frameworks */,
-				91F87A861B176340009B920A /* Bolts.framework in Frameworks */,
 				91F87A821B17632C009B920A /* libsqlite3.dylib in Frameworks */,
-				91F87A871B176340009B920A /* Parse.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,6 +157,8 @@
 		91F87A831B176330009B920A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				91185E111B30EF3B00F3A1AB /* Bolts.framework */,
+				91185E121B30EF3B00F3A1AB /* Parse.framework */,
 				91F87A981B176393009B920A /* libz.dylib */,
 				91F87A961B176389009B920A /* SystemConfiguration.framework */,
 				91F87A941B176382009B920A /* StoreKit.framework */,
@@ -166,8 +168,6 @@
 				91F87A8C1B176360009B920A /* CoreGraphics.framework */,
 				91F87A8A1B17635A009B920A /* CFNetwork.framework */,
 				91F87A881B176355009B920A /* AudioToolbox.framework */,
-				91F87A841B176340009B920A /* Bolts.framework */,
-				91F87A851B176340009B920A /* Parse.framework */,
 			);
 			name = Frameworks;
 			path = Favorites;
@@ -406,6 +406,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/kylebrooksrobinson/Downloads/parse-library-1.7.4",
+					"$(PROJECT_DIR)/Favorites",
 				);
 				INFOPLIST_FILE = Favorites/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -421,6 +422,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/kylebrooksrobinson/Downloads/parse-library-1.7.4",
+					"$(PROJECT_DIR)/Favorites",
 				);
 				INFOPLIST_FILE = Favorites/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -482,6 +484,7 @@
 				91F87A7B1B175DC7009B920A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		91F87A7C1B175DC7009B920A /* Build configuration list for PBXNativeTarget "FavoritesTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +493,7 @@
 				91F87A7E1B175DC7009B920A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
