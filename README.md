@@ -40,5 +40,7 @@ These are small apps that we made in class to learn various concepts that Jo tau
 
 **Secrets**:  In this Objective C app, we worked with Parse and implemented push notifications, as well as worked through the process of getting a certificate for this feature. 
 
+**FirebaseChat**:  This is an small app we made to introduce the Firebase SDK.  
+
 **CoreNotes**: This is an app that introduces Core Data and shows a few simple ways in which it can be used.
 
