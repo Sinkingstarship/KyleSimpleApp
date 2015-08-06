@@ -117,7 +117,7 @@
     
     if (size.height / size.width != image.size.height / image.size.height) {
         
-        // fix ration size
+        // fix ratio size
         
         if (image.size.height > image.size.width) { //portrait
             
@@ -135,9 +135,6 @@
             CGFloat newX = (size.width - newWidth) /2;
             
             scaleImageRect = CGRectMake(newX, 0, newWidth, size.height);
-
-            
-            
             
         }
         

@@ -49,7 +49,7 @@ class NotesTableViewController: UITableViewController {
                     
 //                    request.predicate = predicate
                     
-                    let predicate = NSPredicate(format: "%K contains %@", "category", "String")
+                    let predicate = NSPredicate(format: "%K contains %@", "content", catObject)
                     
                     request.predicate = predicate
                         
@@ -69,12 +69,11 @@ class NotesTableViewController: UITableViewController {
         }
         
     }
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-    
+            
         
         }
     
